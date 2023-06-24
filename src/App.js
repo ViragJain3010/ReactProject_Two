@@ -1,41 +1,26 @@
 import React from 'react';
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
-} from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+import { Box, useTheme, useColorMode } from '@chakra-ui/react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Footer, Header, Home, Videos, Upload, Login } from './components';
 
 function App() {
+  const theme = useTheme();
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
-      </Box>
-    </ChakraProvider>
+    <Box
+      bg={colorMode === 'light' ? theme.colors.bg_light : theme.colors.fifth}
+    >
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/popular" element={<Videos />} />
+          <Route path="/upload" element={<Upload />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </Box>
   );
 }
 
