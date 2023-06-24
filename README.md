@@ -43,7 +43,7 @@ For major changes, please open an issue first to discuss the proposed changes.
 
 ## License
 
-This project is licensed under the [MIT License](https://github.com/WhatIsThisVJ/ReactProject_Two/blob/main/LICENSE).
+This project is licensed under the [MIT License](https://github.com/WhatIsThisVJ/ReactProject_Two/blob/master/LICENSE).
 
 ## Contact
 
