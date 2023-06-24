@@ -18,6 +18,7 @@ function App() {
           <Route path="/popular" element={<Videos />} />
           <Route path="/upload" element={<Upload />} />
           <Route path="/login" element={<Login />} />
+          <Route path="*" element={<Navigate to="/home" replace />} />
         </Routes>
         <Footer />
       </Router>
