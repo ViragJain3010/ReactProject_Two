@@ -109,25 +109,25 @@ const MyCarousel = () => {
       interval={2000}
     >
       <Box w={'full'} h={'100vh'}>
-        <Image src={img3} />
+        <Image src={img3} h="full" w="full" objectFit={'cover'}/>
         <Heading bgColor={'blackAlpha.600'} color={'white'} {...headingOptions}>
           The World is Here
         </Heading>
       </Box>
       <Box w={'full'} h={'100vh'}>
-        <Image src={img4} />
+        <Image src={img4} h="full" w="full" objectFit={'cover'}/>
         <Heading bgColor={'blackAlpha.400'} color={'white'} {...headingOptions}>
           This is Tommorow
         </Heading>
       </Box>
       <Box w={'full'} h={'100vh'}>
-        <Image src={img2} />
+        <Image src={img2} h="full" w="full" objectFit={'cover'}/>
         <Heading bgColor={'blackAlpha.400'} color={'white'} {...headingOptions}>
           The Future is Now
         </Heading>
       </Box>
       <Box w={'full'} h={'100vh'}>
-        <Image src={img1} />
+        <Image src={img1} h="full" w="full" objectFit={'cover'}/>
         <Heading bgColor={'blackAlpha.600'} color={'white'} {...headingOptions}>
           Begin your journey
         </Heading>

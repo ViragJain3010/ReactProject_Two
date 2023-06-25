@@ -7,6 +7,7 @@ const theme = extendTheme({
         third : "#3F8085",
         fourth: "#004346",
         fifth : "#1C0B19",
+        sixth:"#386EA7",
         bg_light:"#F1F8F9",
         placeHolder: "#bfbfbf",
         text: "#ddedee"

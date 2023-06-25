@@ -7,7 +7,7 @@ import {
   Button,
   useTheme,
   useColorMode,
-  Text,
+  Avatar,
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
@@ -25,10 +25,11 @@ const Login = () => {
           m={'auto'}
           my={'16'}
         >
-          <Heading textAlign={'center'}>Welcome Back</Heading>
+          <Heading textAlign={'center'}>Create Account</Heading>
+          <Avatar alignSelf={'center'} boxSize={'32'} />
           <Input
-            placeholder="Email Id"
-            type="email"
+            placeholder="Name"
+            type="text"
             required
             focusBorderColor={
               colorMode === 'light' ? theme.colors.second : theme.colors.third
@@ -45,6 +46,26 @@ const Login = () => {
               '::placeholder': { color: `gray.500` },
             }}
           />
+          <Input
+            placeholder={'Email'}
+            type={'email'}
+            required
+            focusBorderColor={
+              colorMode === 'light' ? theme.colors.second : theme.colors.third
+            }
+            borderColor={
+              colorMode === 'light' ? theme.colors.first : theme.colors.fourth
+            }
+            _hover={{
+              borderColor: `${
+                colorMode === 'light' ? theme.colors.second : theme.colors.third
+              }`,
+            }}
+            sx={{
+              '::placeholder': { color: `gray.500` },
+            }}
+          />
+
           <Input
             placeholder={'Password'}
             type={'password'}
@@ -65,9 +86,6 @@ const Login = () => {
             }}
           />
 
-          <Button variant={'link'} alignSelf={'flex-end'}>
-            <Link>Forget Password?</Link>
-          </Button>
           <Button
             bg={
               colorMode === 'light' ? theme.colors.second : theme.colors.third
@@ -80,29 +98,11 @@ const Login = () => {
             textColor={'white'}
             type="submit"
           >
-            Log In
+            Create Account
           </Button>
-          <Text alignSelf={'flex-end'}>
-            Don't have an account?{'  '}
-            <Button
-              variant={'link'}
-              alignSelf={'flex-end'}
-              as={Link}
-              to="/signup"
-              textColor={
-                colorMode === 'light' ? theme.colors.sixth : theme.colors.third
-              }
-              _hover={{
-                textColor:
-                  colorMode === 'light'
-                    ? theme.colors.fourth
-                    : theme.colors.first,
-                textDecoration: 'underline',
-              }}
-            >
-              Sign up
-            </Button>
-          </Text>
+          <Button variant={'link'} alignSelf={'flex-end'} as={Link} to="/login">
+            Already Registered
+          </Button>
         </VStack>
       </form>
     </Container>

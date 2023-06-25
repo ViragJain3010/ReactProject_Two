@@ -11,7 +11,12 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { MdSend } from 'react-icons/md';
-import { AiOutlineCopyright, AiFillInstagram, AiFillFacebook, AiFillLinkedin } from 'react-icons/ai';
+import {
+  AiOutlineCopyright,
+  AiFillInstagram,
+  AiFillLinkedin,
+  AiFillGithub,
+} from 'react-icons/ai';
 
 const Footer = () => {
   const theme = useTheme();
@@ -28,7 +33,11 @@ const Footer = () => {
       >
         <Stack direction={['column', 'row']}>
           <VStack alignItems={'strech'} w="full" px={4}>
-            <Heading size="lg" textTransform={'uppercase'} textAlign={['center','left']}>
+            <Heading
+              size="lg"
+              textTransform={'uppercase'}
+              textAlign={['center', 'left']}
+            >
               Get Connected With Us
             </Heading>
             <HStack borderBottom={'2px solid white'} py={2}>
@@ -71,17 +80,49 @@ const Footer = () => {
             <Heading size={'lg'} textTransform={'uppercase'}>
               Social Media
             </Heading>
-            <HStack py={4}> 
-            <Button variant={'link'} textColor={'white'} fontWeight={'light'} px={6}>
-              <a href="http://instagram.com/viragjain3010/" target='_blank' rel="noreferrer"><AiFillInstagram size={45} color={`${theme.colors.text}`} /></a>
-              
-            </Button>
-            <Button variant={'link'} textColor={'white'} fontWeight={'light'} px={6}>
-              <a href="https://facebook.com" target='_blank' rel="noreferrer"><AiFillFacebook size={45} color={`${theme.colors.text}`} /></a>
-            </Button>
-            <Button variant={'link'} textColor={'white'} fontWeight={'light'} px={6}>
-            <a href="https://www.linkedin.com/in/virag-jain-b6a800223" target='_blank' rel="noreferrer"><AiFillLinkedin size={45} color={`${theme.colors.text}`} /></a>
-            </Button>
+            <HStack py={4}>
+              <Button
+                variant={'link'}
+                textColor={'white'}
+                fontWeight={'light'}
+                px={6}
+              >
+                <a
+                  href="http://instagram.com/viragjain3010/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <AiFillInstagram size={45} color={`${theme.colors.text}`} />
+                </a>
+              </Button>
+              <Button
+                variant={'link'}
+                textColor={'white'}
+                fontWeight={'light'}
+                px={6}
+              >
+                <a
+                  href="https://github.com/WhatIsThisVJ"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <AiFillGithub size={45} color={`${theme.colors.text}`} />
+                </a>
+              </Button>
+              <Button
+                variant={'link'}
+                textColor={'white'}
+                fontWeight={'light'}
+                px={6}
+              >
+                <a
+                  href="https://www.linkedin.com/in/virag-jain-b6a800223"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <AiFillLinkedin size={45} color={`${theme.colors.text}`} />
+                </a>
+              </Button>
             </HStack>
           </VStack>
         </Stack>
